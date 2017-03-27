@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mopgoo.huang.guolin.rotate3danimation.Rotate3dActivity">
+    <ImageView
+        android:id="@+id/zheng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher"/>
+    <ImageView
+        android:id="@+id/fan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/replay_gj_location_ic"
+        android:visibility="gone"/>
+</RelativeLayout>

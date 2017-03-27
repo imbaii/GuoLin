@@ -14,8 +14,10 @@ import mopgoo.huang.guolin.R;
 
 public class MainViewHolder extends RecyclerView.ViewHolder{
     public TextView textView;
+    public View view;
     public MainViewHolder(View itemView) {
         super(itemView);
+        view=itemView;
         textView= (TextView) itemView.findViewById(R.id.item_name);
     }
 }

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mopgoo.huang.guolin.R;
+import mopgoo.huang.guolin.image3dswitchview.ImageSwitchActivity;
 import mopgoo.huang.guolin.rotate3danimation.Rotate3dActivity;
 import mopgoo.huang.guolin.widget.RecyclerViewDecoration;
 
@@ -35,7 +36,9 @@ public class MainActivity extends Activity implements MainActivityAdapter.OnItem
 
     private void initData() {
         data.add("Rotate3dActivity");
+        data.add("ImageSwitchActivity");
         classdata.add(Rotate3dActivity.class);
+        classdata.add(ImageSwitchActivity.class);
     }
 
     private void startActivity(Class clazz){

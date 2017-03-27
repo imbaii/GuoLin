@@ -29,23 +29,24 @@ public class MainActivityAdapter extends SwipeMenuAdapter<MainViewHolder>{
     }
 
     @Override
-    public View onCreateContentView(ViewGroup viewGroup, int i) {
-        return LayoutInflater.from(mcontext).inflate(layoutId,viewGroup,false);
+    public View onCreateContentView(ViewGroup viewGroup, final int i) {
+        View view=LayoutInflater.from(mcontext).inflate(layoutId,viewGroup,false);
+        return view;
     }
 
     @Override
     public MainViewHolder onCompatCreateViewHolder(View view, final int i) {
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               onItemClickListener.onclick(v,i);
-            }
-        });
         return new MainViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(MainViewHolder holder, int position) {
+    public void onBindViewHolder(MainViewHolder holder, final int position) {
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickListener.onclick(v,position);
+            }
+        });
         holder.textView.setText((position+1)+". "+data.get(position));
     }
 

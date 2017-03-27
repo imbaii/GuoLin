@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".rotate3danimation.Rotate3dActivity"></activity>
+        <activity android:name=".rotate3danimation.Rotate3dActivity" />
+        <activity android:name=".image3dswitchview.ImageSwitchActivity"></activity>
     </application>
 
 </manifest>

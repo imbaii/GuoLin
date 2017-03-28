@@ -23,12 +23,12 @@ public class MainActivity extends Activity implements MainActivityAdapter.OnItem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initData();
         recyclerView= (SwipeMenuRecyclerView) findViewById(R.id.index);
         recyclerView.addItemDecoration(new RecyclerViewDecoration(MainActivity.this, LinearLayoutManager.HORIZONTAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         mAdapter=new MainActivityAdapter(MainActivity.this,R.layout.item_main,data,this);
         recyclerView.setAdapter(mAdapter);
+        initData();
 
     }
 
@@ -36,6 +36,7 @@ public class MainActivity extends Activity implements MainActivityAdapter.OnItem
         data.add("Rotate3dActivity");
         data.add("ImageSwitchActivity");
         data.add("SlideMenuActivity");
+        data.add("ContactActivity");
     }
 
     private void startActivity(Class clazz){
@@ -45,6 +46,7 @@ public class MainActivity extends Activity implements MainActivityAdapter.OnItem
     @Override
     public void onclick(View view, int position) {
         startActivity(getclass(data.get(position)));
+
     }
 
     private Class getclass(String s) {

@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".index.MainActivity">
+        <activity android:name=".index.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".rotate3danimation.Rotate3dActivity" />
-        <activity android:name=".image3dswitchview.ImageSwitchActivity"></activity>
+        <activity android:name=".index.activity.Rotate3dActivity" />
+        <activity android:name=".index.activity.ImageSwitchActivity" />
+        <activity android:name=".index.activity.SlideMenuActivity"></activity>
     </application>
 
 </manifest>

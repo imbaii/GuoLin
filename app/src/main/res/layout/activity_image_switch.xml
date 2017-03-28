@@ -7,7 +7,8 @@
     <mopgoo.huang.guolin.image3dswitchview.Image3DSwitchView
         android:id="@+id/image_switch_view"
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_margin="50dp"
+        android:layout_height="50dp">
 
         <mopgoo.huang.guolin.image3dswitchview.Image3DView
             android:layout_width="match_parent"

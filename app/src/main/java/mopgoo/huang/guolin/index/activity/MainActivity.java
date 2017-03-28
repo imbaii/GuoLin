@@ -1,4 +1,4 @@
-package mopgoo.huang.guolin.index;
+package mopgoo.huang.guolin.index.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,15 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mopgoo.huang.guolin.R;
-import mopgoo.huang.guolin.image3dswitchview.ImageSwitchActivity;
-import mopgoo.huang.guolin.rotate3danimation.Rotate3dActivity;
+import mopgoo.huang.guolin.index.MainActivityAdapter;
 import mopgoo.huang.guolin.widget.RecyclerViewDecoration;
 
-public class MainActivity extends Activity implements MainActivityAdapter.OnItemClickListener{
+public class MainActivity extends Activity implements MainActivityAdapter.OnItemClickListener {
     private SwipeMenuRecyclerView recyclerView;
     private MainActivityAdapter mAdapter;
     private List<String> data=new ArrayList<String>();
-    private List<Class>  classdata=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +35,7 @@ public class MainActivity extends Activity implements MainActivityAdapter.OnItem
     private void initData() {
         data.add("Rotate3dActivity");
         data.add("ImageSwitchActivity");
-        classdata.add(Rotate3dActivity.class);
-        classdata.add(ImageSwitchActivity.class);
+        data.add("SlideMenuActivity");
     }
 
     private void startActivity(Class clazz){
@@ -47,6 +44,15 @@ public class MainActivity extends Activity implements MainActivityAdapter.OnItem
 
     @Override
     public void onclick(View view, int position) {
-        startActivity(classdata.get(position));
+        startActivity(getclass(data.get(position)));
+    }
+
+    private Class getclass(String s) {
+        try {
+            return  Class.forName("mopgoo.huang.guolin.index.activity."+s);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return MainActivity.class;
     }
 }

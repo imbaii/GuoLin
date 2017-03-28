@@ -1,4 +1,4 @@
-package mopgoo.huang.guolin.rotate3danimation;
+package mopgoo.huang.guolin.index.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import mopgoo.huang.guolin.R;
+import mopgoo.huang.guolin.rotate3danimation.Rotate3dAnimation;
 
 public class Rotate3dActivity extends Activity {
     private ImageView zheng;

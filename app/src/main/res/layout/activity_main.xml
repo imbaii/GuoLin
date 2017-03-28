@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mopgoo.huang.guolin.index.MainActivity">
+    tools:context="mopgoo.huang.guolin.index.activity.MainActivity">
 
     <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
         android:id="@+id/index"

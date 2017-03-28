@@ -1,9 +1,10 @@
-package mopgoo.huang.guolin.image3dswitchview;
+package mopgoo.huang.guolin.index.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 import mopgoo.huang.guolin.R;
+import mopgoo.huang.guolin.image3dswitchview.Image3DSwitchView;
 
 public class ImageSwitchActivity extends Activity {
 
